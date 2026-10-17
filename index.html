@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#081a36">
+<title>نقاطي للمكافآت — نسخة تجريبية</title>
+<style>
+:root{--navy:#071831;--navy2:#0b2550;--blue:#1677ff;--gold:#ffc928;--ink:#10284c;--muted:#607393;--line:#dce7f8;--green:#13b981}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f5f8ff;color:var(--ink);line-height:1.7}
+a{color:inherit;text-decoration:none}.top{background:linear-gradient(110deg,#06152c,#0d2b59);color:white;border-bottom:1px solid #21436d}
+.nav{max-width:1160px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-size:25px;font-weight:800}.gift{font-size:34px;color:var(--gold)}.brand small{display:block;font-size:12px;font-weight:400;line-height:1.2}
+.navlinks{display:flex;gap:25px;color:#d8e5fb;font-size:14px}.navlinks a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:13px;padding:12px 20px;font-weight:700;font-size:15px;cursor:pointer;background:var(--blue);color:white;box-shadow:0 8px 20px #1677ff2b}.btn.gold{background:linear-gradient(90deg,#ffc928,#ffb900);color:#12294b}.btn:focus,input:focus{outline:3px solid #83b7ff}
+.hero{background:radial-gradient(ellipse at 78% 45%,#164fbd 0,#0a2c70 27%,transparent 53%),linear-gradient(115deg,#071831,#0b2450);color:white;overflow:hidden}
+.hero-inner{max-width:1160px;margin:auto;padding:55px 24px 48px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:28px}
+.kicker{display:inline-block;background:#ffffff15;border:1px solid #ffffff2a;border-radius:100px;padding:5px 12px;color:#b8d6ff;font-size:13px}
+h1{font-size:clamp(30px,4.3vw,48px);line-height:1.35;margin:16px 0;color:#fff}h1 em{font-style:normal;color:var(--gold)}.hero p{color:#dbe8ff;font-size:17px;max-width:590px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.note{font-size:12px!important;color:#b9c9e4!important}
+.art{min-height:270px;display:grid;place-items:center;position:relative}.card-art{width:min(290px,75%);aspect-ratio: .72;background:linear-gradient(145deg,#171b27,#02050b);border:1px solid #a7c4ff77;border-radius:24px;transform:rotate(-8deg);box-shadow:0 25px 70px #0007,0 0 50px #2e78ff88;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}.play-mark{font-size:85px;line-height:1;color:#32c5f4;text-shadow:10px 5px #ffc928,-8px 7px #f34b68}.card-art strong{font-size:26px;color:white;letter-spacing:-1px}.price{position:absolute;top:16%;right:4%;background:#1677ff;border-radius:16px;padding:9px 17px;font-size:18px;font-weight:bold;box-shadow:0 12px 30px #001b54}.demo-stamp{position:absolute;bottom:10%;left:1%;background:#ffc928;color:#13254a;padding:8px 14px;border-radius:9px;font-size:12px;font-weight:bold;transform:rotate(-5deg)}
+.features{max-width:1160px;margin:-1px auto 0;padding:18px 22px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;background:#081a36}
+.feature{border:1px solid #284b7a;border-radius:16px;padding:17px 12px;text-align:center;color:white;background:#ffffff06}.feature .ico{font-size:29px}.feature h3{font-size:16px;margin:3px 0}.feature p{margin:0;color:#c0d0e8;font-size:12px}
+.section{max-width:1160px;margin:30px auto;padding:0 22px}.section-head{text-align:center;margin-bottom:20px}.section-head h2{margin:0;font-size:27px}.section-head p{margin:3px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:white;border:1px solid var(--line);border-radius:16px;padding:22px 15px;text-align:center;box-shadow:0 5px 18px #0b2d5c08}.step .num{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;margin:0 auto 9px;background:#e5efff;color:#1264e8;font-weight:bold;font-size:20px}.step h3{margin:0 0 5px}.step p{margin:0;color:var(--muted);font-size:13px}
+.reward{max-width:1116px;margin:30px auto;padding:24px 28px;border-radius:18px;background:linear-gradient(105deg,#053f39,#08785f);color:white;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 12px 30px #064b3b1b}.reward h2{margin:0;color:#70ffcf}.reward p{margin:5px 0 0}.reward .big-gift{font-size:65px}.reward .tag{background:#ffffff18;border:1px solid #ffffff45;border-radius:10px;padding:8px 12px;font-size:12px}
+.signup-layout{max-width:1116px;margin:28px auto 36px;display:grid;grid-template-columns:1.4fr .8fr;gap:18px;padding:0 0}
+.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 6px 24px #0c2c5c08}.panel h2{margin:0 0 3px}.sub{color:var(--muted);font-size:13px;margin:0 0 18px}
+form{display:grid;gap:12px}label{font-size:13px;font-weight:bold}input{width:100%;padding:13px 14px;border:1px solid #d4e0f4;border-radius:11px;font:inherit;font-size:14px;background:#fbfdff;color:var(--ink)}.field{display:grid;gap:5px}.check{display:flex;align-items:flex-start;gap:9px;font-size:12px;color:var(--muted)}.check input{width:auto;margin-top:6px}
+.msg{display:none;padding:13px;border-radius:12px;background:#e8fff5;color:#075f44;font-size:13px}.msg.show{display:block}.demo-warning{background:#fff8df;border:1px solid #f4d77b;color:#72520a;padding:12px;border-radius:12px;font-size:12px;margin-top:12px}
+.benefits{background:#eef4ff}.benefits ul{padding:0 20px;margin:14px 0}.benefits li{padding:8px 0;color:#52698c}.benefits li::marker{color:var(--green)}
+footer{background:#071831;color:#c5d3e8;padding:20px;text-align:center;font-size:12px}footer p{margin:3px}
+@media(max-width:760px){.nav{padding:12px 16px;flex-wrap:wrap}.navlinks{order:3;width:100%;justify-content:space-between;gap:8px;font-size:12px}.nav .btn{padding:9px 12px;font-size:12px}.brand{font-size:20px}.hero-inner{grid-template-columns:1fr;text-align:center;padding:34px 18px 28px;gap:6px}.hero p{margin-inline:auto}.hero-actions{justify-content:center}.art{min-height:235px;grid-row:1}.card-art{width:190px}.play-mark{font-size:65px}.card-art strong{font-size:21px}.price{right:10%;top:9%}.demo-stamp{left:8%;bottom:4%}.features{grid-template-columns:repeat(2,1fr);padding:14px}.feature{padding:13px 8px}.steps{grid-template-columns:repeat(2,1fr)}.section{padding:0 14px;margin:24px auto}.reward{margin:20px 14px;padding:18px;flex-wrap:wrap}.reward .big-gift{font-size:42px}.signup-layout{grid-template-columns:1fr;margin:22px 14px}.panel{padding:19px}.section-head h2{font-size:23px}}
+@media(max-width:380px){.navlinks{font-size:11px}.steps{gap:8px}.step{padding:16px 9px}.hero h1{font-size:29px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <nav class="nav" aria-label="التنقل الرئيسي">
+    <a class="brand" href="#home"><span class="gift">🎁</span><span>نقاطي<small>للمكافآت</small></span></a>
+    <div class="navlinks"><a href="#home">الرئيسية</a><a href="#tasks">المهام</a><a href="#rewards">المكافآت</a><a href="#support">الدعم</a></div>
+    <a class="btn" href="#signup">إنشاء حساب</a>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="hero-inner">
+  <div>
+   <span class="kicker">✨ نسخة تجريبية — Demo</span>
+   <h1>ابدأ رحلتك مع النقاط<br><em>واكتشف مكافآت Google Play!</em></h1>
+   <p>أنشئ حسابًا تجريبيًا، تعرّف على المهام، وشاهد كيف يمكن أن يعمل نظام المكافآت. لا تُمنح أكواد حقيقية في هذه النسخة.</p>
+   <div class="hero-actions"><a class="btn gold" href="#signup">جرّب التسجيل الآن ←</a><a class="btn" href="#how">كيف يعمل الموقع؟</a></div>
+   <p class="note">🔒 نموذج تجريبي فقط — لا تدفع أي أموال ولا تشارك بيانات حساسة.</p>
+  </div>
+  <div class="art" aria-label="رسم توضيحي لبطاقة مكافأة تجريبية">
+   <div class="card-art"><div class="play-mark">▶</div><strong>Google Play</strong><span style="color:#b9c9e4;font-size:12px">تصميم توضيحي فقط</span></div>
+   <div class="price">قيمة توضيحية<br><b style="font-size:25px">$5</b></div><div class="demo-stamp">ليست بطاقة فعلية</div>
+  </div>
+ </div>
+</section>
+<section class="features" aria-label="المزايا">
+ <article class="feature"><div class="ico">🎁</div><h3>نظام مكافآت</h3><p>تعرّف على طريقة الاستبدال</p></article>
+ <article class="feature"><div class="ico">⚡</div><h3>تجربة سهلة</h3><p>واجهة بسيطة وسريعة</p></article>
+ <article class="feature"><div class="ico">🎮</div><h3>مهام متنوعة</h3><p>أفكار للمهام المستقبلية</p></article>
+ <article class="feature"><div class="ico">🛡️</div><h3>وضوح وأمان</h3><p>لا توجد أكواد وهمية</p></article>
+</section>
+<section class="section" id="how">
+ <div class="section-head"><h2>كيف يعمل الموقع؟</h2><p>أربع خطوات بسيطة لفهم نموذج المكافآت</p></div>
+ <div class="steps">
+  <article class="step"><div class="num">1</div><h3>أنشئ حسابًا</h3><p>جرّب نموذج التسجيل أدناه دون إرسال بيانات إلى خادم.</p></article>
+  <article class="step" id="tasks"><div class="num">2</div><h3>أكمل المهام</h3><p>في النسخة الكاملة يمكن إضافة مهام واضحة ومشروعة.</p></article>
+  <article class="step"><div class="num">3</div><h3>اجمع النقاط</h3><p>يمكن بناء رصيد نقاط بعد إعداد نظام خلفي موثوق.</p></article>
+  <article class="step"><div class="num">4</div><h3>استبدل المكافآت</h3><p>يتطلب ذلك أكوادًا أصلية متوفرة وممولة مسبقًا.</p></article>
+ </div>
+</section>
+<section class="reward" id="rewards">
+ <div class="big-gift">🎁</div><div style="flex:1"><h2>مكافأة التسجيل — عرض توضيحي</h2><p>بطاقة Google Play بقيمة 5 دولارات هي مثال للتصميم فقط؛ لا يوجد كود فعلي في هذه النسخة.</p></div><span class="tag">DEMO · غير قابلة للاستبدال</span>
+</section>
+<section class="signup-layout" id="signup">
+ <div class="panel">
+  <h2>إنشاء حساب تجريبي</h2><p class="sub">جرّب التفاعل مع الموقع باستخدام بيانات غير حساسة.</p>
+  <form id="signupForm">
+   <div class="field"><label for="nickname">اسم العرض</label><input id="nickname" name="nickname" placeholder="مثال: لاعب_123" required maxlength="24" autocomplete="nickname"></div>
+   <div class="field"><label for="email">البريد الإلكتروني (اختياري في التجربة)</label><input id="email" name="email" type="email" placeholder="name@example.com" autocomplete="email"></div>
+   <div class="field"><label for="password">كلمة مرور تجريبية</label><input id="password" name="password" type="password" placeholder="اكتب 6 أحرف على الأقل" minlength="6" required autocomplete="new-password"></div>
+   <label class="check"><input type="checkbox" id="agree" required><span>أفهم أن هذا نموذج تجريبي، وأنه لا ينشئ حسابًا حقيقيًا ولا يسلّمني بطاقة أو كودًا.</span></label>
+   <button class="btn" type="submit">إنشاء حساب تجريبي</button>
+   <div class="msg" id="success" role="status" aria-live="polite"></div>
+  </form>
+  <div class="demo-warning">تنبيه: بيانات النموذج لا تُرسل إلى أي مكان ولا تُحفظ. لا تستخدم كلمة مرورك الحقيقية.</div>
+ </div>
+ <aside class="panel benefits" id="support">
+  <h2>ماذا تتضمن النسخة؟</h2>
+  <ul><li>تصميم عربي متوافق مع الهاتف.</li><li>نموذج تسجيل تجريبي تفاعلي.</li><li>شرح نظام النقاط والمكافآت.</li><li>لا توجد أكواد أو وعود ربح مزيفة.</li></ul>
+  <p class="sub">لإطلاق نسخة حقيقية، يلزم إعداد خادم آمن وقاعدة بيانات ومصدر قانوني لأكواد المكافآت.</p>
+ </aside>
+</section>
+</main>
+<footer><p>© 2026 نقاطي للمكافآت — نموذج تجريبي مستقل.</p><p>Google Play علامة تجارية تابعة لمالكها؛ هذا النموذج غير تابع لها ولا يمثل عرضًا رسميًا.</p></footer>
+<script>
+document.getElementById('signupForm').addEventListener('submit', function(e){
+ e.preventDefault();
+ const nickname = document.getElementById('nickname').value.trim();
+ const msg = document.getElementById('success');
+ if(!nickname || !document.getElementById('password').checkValidity() || !document.getElementById('agree').checked) return;
+ msg.textContent = 'أهلًا ' + nickname + '! نجح اختبار النموذج فقط. لم يتم إنشاء حساب حقيقي، ولم تُمنح بطاقة أو نقاط قابلة للاستبدال.';
+ msg.classList.add('show');
+});
+</script>
+</body>
+</html>
